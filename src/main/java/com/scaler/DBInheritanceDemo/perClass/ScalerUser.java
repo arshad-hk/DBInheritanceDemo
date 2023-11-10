@@ -1,13 +1,11 @@
-package com.scaler.DBInheritanceDemo.singleTable;
+package com.scaler.DBInheritanceDemo.perClass;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Getter
-@Setter
-@Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Entity(name = "scaler_user_per_class")
+@Data
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class ScalerUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

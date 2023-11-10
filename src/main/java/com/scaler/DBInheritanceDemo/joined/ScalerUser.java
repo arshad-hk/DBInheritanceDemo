@@ -1,13 +1,17 @@
-package com.scaler.DBInheritanceDemo.singleTable;
+package com.scaler.DBInheritanceDemo.joined;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Entity(name = "scaleruser_joined")
 @Getter
 @Setter
-@Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@AllArgsConstructor
+@NoArgsConstructor
+@Inheritance(strategy = InheritanceType.JOINED)
 public class ScalerUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
